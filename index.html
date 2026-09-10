@@ -40,7 +40,7 @@
     </button>
 
     <nav>
-        <p>credit is due</p>
+        <p>ver a; credit is due</p>
         <div class="site-title faux-heading"><a href="https://chemquiz.net/nam" rel="home">ChemQuiz.net</a></div>
         <p>Dynamically generated practice quizzes to help you learn chemistry!</p><!-- .site-description -->
     </nav>
@@ -113,17 +113,17 @@
               <input type="checkbox" name="compounds[]" value="multiCharge" id="compounds_multiCharge" checked>
               <label for="compounds_multiCharge" style="display: inline; font-size: inherit;">&nbsp;Ionic compounds with multiple charge monatomic cations (e.g., copper)</label><br>
 
-              <input type="checkbox" name="compounds[]" value="monoAnion" id="compounds_monoAnion" checked>
-              <label for="compounds_monoAnion" style="display: inline; font-size: inherit;">&nbsp;Ionic compounds with monatomic anions (e.g., chlorine)</label><br>
+              <!-- <input type="checkbox" name="compounds[]" value="monoAnion" id="compounds_monoAnion" checked>
+              <label for="compounds_monoAnion" style="display: inline; font-size: inherit;">&nbsp;Ionic compounds with monatomic anions (e.g., chlorine)</label><br> !-->
 
-              <input type="checkbox" name="compounds[]" value="commonPoly" id="compounds_commonPoly" checked>
-              <label for="compounds_commonPoly" style="display: inline; font-size: inherit;">&nbsp;Ionic compounds with common polyatomic ions</label><br>
+              <input type="checkbox" name="compoundPolyType[]" value="commonPoly" id="compounds_commonPoly" checked>
+              <label for="compounds_commonPoly" style="display: inline; font-size: inherit;">&nbsp;Ionic compounds with common polyatomic anions</label><br>
 
-              <input type="checkbox" name="compounds[]" value="uncommonPoly" id="compounds_uncommonPoly" checked>
-              <label for="compounds_uncommonPoly" style="display: inline; font-size: inherit;">&nbsp;Ionic compounds with uncommon polyatomic ions</label><br>
+              <input type="checkbox" name="compoundPolyType[]" value="uncommonPoly" id="compounds_uncommonPoly" checked>
+              <label for="compounds_uncommonPoly" style="display: inline; font-size: inherit;">&nbsp;Ionic compounds with uncommon polyatomic anions</label><br>
 
-              <input type="checkbox" name="compounds[]" value="hydrate" id="compounds_hydrate">
-              <label for="compounds_hydrate" style="display: inline; font-size: inherit;">&nbsp;Hydrates</label><br>
+              <!-- <input type="checkbox" name="compounds[]" value="hydrate" id="compounds_hydrate">
+              <label for="compounds_hydrate" style="display: inline; font-size: inherit;">&nbsp;Hydrates</label><br> !-->
 
               <strong>Covalent compounds</strong><br>
 
@@ -133,8 +133,8 @@
               <input type="checkbox" name="compounds[]" value="molecular" id="compounds_molecular" checked>
               <label for="compounds_molecular" style="display: inline; font-size: inherit;">&nbsp;Molecular compounds</label><br>
 
-              <input type="checkbox" name="compounds[]" value="ionic" id="compounds_ionic">
-              <label for="compounds_ionic" style="display: inline; font-size: inherit;">&nbsp;Polyatomic ions</label><br>
+             <!--<input type="checkbox" name="compounds[]" value="ionic" id="compounds_ionic">
+              <label for="compounds_ionic" style="display: inline; font-size: inherit;">&nbsp;Polyatomic ions</label><br> !-->
 
               <input type="checkbox" name="compounds[]" value="organic" id="compounds_organic">
               <label for="compounds_organic" style="display: inline; font-size: inherit;">&nbsp;Simple hydrocarbons (first 10 alkanes)</label><br>
@@ -1104,7 +1104,75 @@ function closeMenu() {
 
 const compoundDatabase = [
 
+{formula:'As4O6',name:'tetrarsenic hexoxide',type:'molecular',polyType:'mono',explanation:''},
+{formula:'As4O6',name:'tetrarsenic hexoxide',type:'molecular',polyType:'mono',explanation:''},
+{formula:'B2Cl4',name:'diboron tetrachloride',type:'molecular',polyType:'mono',explanation:''},
+{formula:'BrF3',name:'bromine trifluoride',type:'molecular',polyType:'mono',explanation:''},
+{formula:'C5O2',name:'pentacarbon dioxide',type:'molecular',polyType:'mono',explanation:''},
+{formula:'CCl2',name:'carbon dichloride',type:'molecular',polyType:'mono',explanation:''},
+{formula:'CF',name:'carbon monofluoride',type:'molecular',polyType:'mono',explanation:''},
+{formula:'CI4',name:'carbon tetraiodide',type:'molecular',polyType:'mono',explanation:''},
+{formula:'ClF3',name:'chlorine trifluoride',type:'molecular',polyType:'mono',explanation:''},
+{formula:'ClO',name:'chlorine monoxide',type:'molecular',polyType:'mono',explanation:''},
+{formula:'CO2',name:'carbon dioxide',type:'molecular',polyType:'mono',explanation:''},
+{formula:'CS2',name:'carbon disulfide',type:'molecular',polyType:'mono',explanation:''},
+{formula:'CSe2',name:'carbon diselenide',type:'molecular',polyType:'mono',explanation:''},
+{formula:'I2O5',name:'diiodine pentoxide',type:'molecular',polyType:'mono',explanation:''},
+{formula:'I4O9',name:'tetraiodine nonoxide',type:'molecular',polyType:'mono',explanation:''},
+{formula:'ICl',name:'iodine monochloride',type:'molecular',polyType:'mono',explanation:''},
+{formula:'IF5',name:'iodine pentafluoride',type:'molecular',polyType:'mono',explanation:''},
+{formula:'N2O3',name:'dinitrogen trioxide',type:'molecular',polyType:'mono',explanation:''},
+{formula:'NCl3',name:'nitrogen trichloride',type:'molecular',polyType:'mono',explanation:''},
+{formula:'NF3',name:'nitrogen trifluoride',type:'molecular',polyType:'mono',explanation:''},
+{formula:'NH3',name:'nitrogen trihydride',aliases:['ammonia'],type:'molecular',polyType:'mono',explanation:''},
+{formula:'NO2',name:'nitrogen dioxide',type:'molecular',polyType:'mono',explanation:''},
+{formula:'NO3',name:'nitrogen trioxide',type:'molecular',polyType:'mono',explanation:''},
+{formula:'OF',name:'oxygen monofluoride',type:'molecular',polyType:'mono',explanation:''},
+{formula:'P4O10',name:'tetraphosphorus decoxide',type:'molecular',polyType:'mono',explanation:''},
+{formula:'P4Se3',name:'tetraphosphorus triselenide',type:'molecular',polyType:'mono',explanation:''},
+{formula:'PBr3',name:'phosphorus tribromide',type:'molecular',polyType:'mono',explanation:''},
+{formula:'PBr5',name:'phosphorus pentabromide',type:'molecular',polyType:'mono',explanation:''},
+{formula:'PF2',name:'phosphorus difluoride',type:'molecular',polyType:'mono',explanation:''},
+{formula:'PF3',name:'phosphorus trifluoride',type:'molecular',polyType:'mono',explanation:''},
+{formula:'PF5',name:'phosphorus pentafluoride',type:'molecular',polyType:'mono',explanation:''},
+{formula:'PN',name:'phosphorus mononitride',type:'molecular',polyType:'mono',explanation:''},
+{formula:'S2F2',name:'disulfur difluoride',type:'molecular',polyType:'mono',explanation:''},
+{formula:'SCl2',name:'sulfur dichloride',type:'molecular',polyType:'mono',explanation:''},
+{formula:'SCl',name:'sulfur monochloride',type:'molecular',polyType:'mono',explanation:''},
+{formula:'SeCl4',name:'selenium tetrachloride',type:'molecular',polyType:'mono',explanation:''},
+{formula:'SeF6',name:'selenium hexafluoride',type:'molecular',polyType:'mono',explanation:''},
+{formula:'SeO2',name:'selenium dioxide',type:'molecular',polyType:'mono',explanation:''},
+{formula:'SF2',name:'sulfur difluoride',type:'molecular',polyType:'mono',explanation:''},
+{formula:'Si2H3',name:'disilicon trihydride',type:'molecular',polyType:'mono',explanation:''},
+{formula:'Si2S4',name:'disilicon tetrasulfide',type:'molecular',polyType:'mono',explanation:''},
+{formula:'SiS',name:'silicon monosulfide',type:'molecular',polyType:'mono',explanation:''},
+{formula:'SO3',name:'sulfur trioxide',type:'molecular',polyType:'mono',explanation:''},
+{formula:'XeF2',name:'xenon difluoride',type:'molecular',polyType:'mono',explanation:''},
+{formula:'XeF4',name:'xenon tetrafluoride',type:'molecular',polyType:'mono',explanation:''},
+{formula:'H2',name:'hydrogen gas',type:'diatomic',polyType:'mono',explanation:''},
+{formula:'N2',name:'nitrogen gas',type:'diatomic',polyType:'mono',explanation:''},
+{formula:'O2',name:'oxygen gas',type:'diatomic',polyType:'mono',explanation:''},
+{formula:'F2',name:'fluorine gas',type:'diatomic',polyType:'mono',explanation:''},
+{formula:'Cl2',name:'chlorine gas',type:'diatomic',polyType:'mono',explanation:''},
+{formula:'I2',name:'iodine',type:'diatomic',polyType:'mono',explanation:''},
+{formula:'Br2',name:'bromine',type:'diatomic',polyType:'mono',explanation:''},
+{formula:'CH4',name:'methane',type:'organic',polyType:'mono',explanation:''},
+{formula:'C2H6',name:'ethane',type:'organic',polyType:'mono',explanation:''},
+{formula:'C3H8',name:'propane',type:'organic',polyType:'mono',explanation:''},
+{formula:'C4H10',name:'butane',type:'organic',polyType:'mono',explanation:''},
+{formula:'C5H12',name:'pentane',type:'organic',polyType:'mono',explanation:''},
+{formula:'C6H14',name:'hexane',type:'organic',polyType:'mono',explanation:''},
+{formula:'C7H16',name:'heptane',type:'organic',polyType:'mono',explanation:''},
+{formula:'C8H18',name:'octane',type:'organic',polyType:'mono',explanation:''},
+{formula:'C9H20',name:'nonane',type:'organic',polyType:'mono',explanation:''},
+{formula:'C10H22',name:'decane',type:'organic',polyType:'mono',explanation:''},
+
   /* Fixed-charge ionic */
+{formula:'As4O6',
+name:'tetrarsenic hexoxide',
+type:'molecular',
+polyType:'mono',
+explanation:''},
 
   {
     formula: "NaCl",
@@ -1757,13 +1825,20 @@ function generateQuestions(settings) {
   const count = Math.max(1, parseInt(settings.items, 10) || 25);
 
   let selectedTypes = settings.compounds || [];
+  let selectedPolyTypes = settings.compoundPolyType || [];
 
   if (!Array.isArray(selectedTypes)) {
     selectedTypes = [selectedTypes];
   }
+  if (!Array.isArray(selectedPolyTypes)) {
+    selectedPolyTypes = [selectedPolyTypes];
+  }
+
+  selectedPolyTypes = [...new Set([...selectedPolyTypes, "mono"])];
 
   let available = compoundDatabase.filter(compound =>
-    selectedTypes.includes(compound.type)
+    selectedTypes.includes(compound.type) &&
+    selectedPolyTypes.includes(compound.polyType)
   );
 
   if (!available.length) {
@@ -1823,10 +1898,11 @@ function generateQuestions(settings) {
       answer,
       formula: compound.formula,
       name: compound.name,
+      aliases: compound.aliases,
       type: compound.type,
       mode,
       qformat,
-      explanation: compound.explanation
+      explanation: compound.explanation,
     });
   }
 
@@ -2044,7 +2120,8 @@ function gradeQuiz() {
     const correct = answersMatch(
       userAnswer,
       question.answer,
-      question.mode
+      question.mode,
+      question.aliases
     );
 
     if (correct) {
@@ -2067,7 +2144,7 @@ function gradeQuiz() {
    ANSWER CHECKING
    ============================================================ */
 
-function answersMatch(user, correct, mode) {
+function answersMatch(user, correct, mode, aliases) {
 
   if (!user || !correct) {
     return false;
@@ -2083,19 +2160,47 @@ function answersMatch(user, correct, mode) {
       String(correct).replace(/[^0-9.-]/g, "")
     );
 
-    if (
+    return (
       Number.isFinite(userMass) &&
-      Number.isFinite(correctMass)
-    ) {
-      return Math.abs(userMass - correctMass) <= 0.05;
-    }
+      Number.isFinite(correctMass) &&
+      Math.abs(userMass - correctMass) <= 0.05
+    );
+  }
 
-    return false;
+  if (mode === "formulaToName") {
+    return isCorrectName(user, correct/* = compound.name*/, aliases);
+  }
+
+  if (Array.isArray(correct)) {
+    return correct.some(answer =>
+      normalizeText(user) === normalizeText(answer)
+    );
   }
 
   return normalizeText(user) === normalizeText(correct);
 }
 
+
+
+function normalizeAnswer(value) {
+  return value
+    .trim()
+    .toLowerCase()
+    .replace(/\s+/g, " ");
+}
+
+function isCorrectName(answer, name, aliases) {
+  const normalizedAnswer = normalizeAnswer(answer);
+
+  const validNames = [
+    name,
+    ...(aliases || [])
+  ];
+
+  return validNames.some(n =>
+    normalizeAnswer(n) === normalizedAnswer
+  );
+}
 
 function normalizeText(value) {
 
