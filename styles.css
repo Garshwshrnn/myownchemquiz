@@ -7996,7 +7996,7 @@ background: transparent; border: none; font-size:30px; cursor:pointer; padding:6
 }
 
 /* Small screen (phones) */
-@media (max-width: 480px) {
+
 	.flashcard-container {
 		width: 90%;
 		height: 180px;
@@ -8011,7 +8011,7 @@ background: transparent; border: none; font-size:30px; cursor:pointer; padding:6
 		font-size: 20px;
 		padding: 6px;
 	}
-}
+
 
 
 /* ================================
