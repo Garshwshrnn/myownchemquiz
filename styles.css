@@ -8216,3 +8216,204 @@ background: transparent; border: none; font-size:30px; cursor:pointer; padding:6
 body.menu-open {
   overflow: hidden;
 }
+
+
+
+    .hidden {
+      display: none !important;
+    }
+
+    .error-message {
+      padding: 15px;
+      margin: 15px 0;
+      background: #ffe5e5;
+      border: 1px solid #c00;
+      color: #900;
+    }
+    
+    table.quiz {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 0 0 25px;
+    }
+
+    table.quiz td {
+      padding: 10px;
+      vertical-align: top;
+    }
+    
+    table.quiz td>*{
+        margin: 0;
+    }
+    
+    
+    table.quiz td br {
+        height: 0;
+    }
+
+    .settings-table td:first-child {
+      width: 31%;
+      font-weight: bold;
+    }
+
+    .settings-table tr:nth-child(odd) {
+      background: #eee;
+    }
+
+    .settings-table tr:nth-child(even) {
+      background: #fff;
+    }
+
+
+
+    .quiz-table {
+      width: 100%;
+      border-collapse: collapse;
+      color: #000;
+    }
+
+    .quiz-table th,
+    .quiz-table td {
+      padding: 9px;
+    }
+
+    .quiz-table th {
+      background: #000;
+      color: #fff;
+      text-align: left;
+    }
+
+    .quiz-table th:first-child,
+    .quiz-table td:first-child {
+      width: 5%;
+      text-align: center;
+      white-space: nowrap;
+    }
+
+    .quiz-table th:nth-child(2),
+    .quiz-table td:nth-child(2) {
+      width: 50%;
+    }
+
+    .quiz-table tr:nth-child(even) {
+      background: #eee;
+    }
+
+    .quiz-table tr:nth-child(odd) {
+      background: #fff;
+    }
+
+    .submit-row {
+      text-align: center;
+      background: #fff !important;
+    }
+
+    #quizResults {
+      padding-bottom: 50px;
+    }
+
+    .score {
+      text-align: center;
+      margin: 30px 0;
+    }
+
+    .score h2 {
+      margin-bottom: 10px;
+    }
+
+    .score-number {
+      font-size: 1.8em;
+      font-weight: bold;
+      margin: 10px 0;
+    }
+
+    .score-percent {
+      font-size: 1.3em;
+    }
+
+    .result-table {
+      width: 100%;
+      border-collapse: collapse;
+      color: #000;
+    }
+
+    .result-table th,
+    .result-table td {
+      padding: 9px;
+      vertical-align: top;
+    }
+
+    .result-table th {
+      background: #000;
+      color: #fff;
+      text-align: left;
+    }
+
+    .result-table tr:nth-child(even) {
+      background: #eee;
+    }
+
+    .result-table tr:nth-child(odd) {
+      background: #fff;
+    }
+
+    .correct {
+      color: green;
+      font-weight: bold;
+    }
+
+    .incorrect {
+      color: red;
+      font-weight: bold;
+    }
+
+    .result-actions {
+      text-align: center;
+      margin: 30px 0;
+    }
+
+    .result-actions button {
+      margin: 5px;
+    }
+
+    .footer-nav-widgets-wrapper {
+      border-top: 1px solid #ddd;
+      padding: 40px 0;
+    }
+
+    .footer-widget h2 {
+      margin-top: 0;
+    }
+
+    footer {
+      border-top: 1px solid #ddd;
+      padding: 25px 0;
+    }
+
+    .footer-credits {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+    }
+
+    footer a {
+      color: #000;
+    }
+
+    .to-the-top {
+      font-size: 22px;
+      text-decoration: none;
+    }
+
+    .hidden {
+      display: none !important;
+    }
+
+    .error-message {
+      padding: 15px;
+      margin: 15px 0;
+      background: #ffe5e5;
+      border: 1px solid #c00;
+      color: #900;
+    }
