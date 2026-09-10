@@ -1,15 +1,15 @@
 <!DOCTYPE html>
-<html class="js" lang="en-US">
-	<head>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<link rel="profile" href="https://gmpg.org/xfn/11">
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Practice naming chemical compounds and calculating molar masses.">
+  <title>ChemQuiz.net :: Naming Compounds</title>
 
-	<title>ChemQuiz.net :: Naming Compounds</title>
-	<meta name="description" content="This quiz helps you practice naming and calculating the molar masses of a wide variety of chemical compounds.">
 <link rel="stylesheet" id="twentytwenty-style-css" href="styles.css">
 
-	</head>
+
+</head>
 
 <body data-rsssl="1" class="wp-singular page-template page-template-templates page-template-template-full-width page-template-templatestemplate-full-width-php page page-id-34 custom-background wp-embed-responsive wp-theme-twentytwenty theme-twentytwenty cookies-not-set woocommerce-js singular has-full-width-content enable-search-modal has-post-thumbnail has-no-pagination not-showing-comments show-avatars template-full-width footer-top-visible" style="background-color: rgb(255, 255, 255); color: rgb(0, 0, 0);">
 
@@ -50,163 +50,168 @@
 
 <main id="site-content">
 
-<article class="post-34 page type-page status-publish has-post-thumbnail hentry" id="post-34">
+  <article class="post-34 page type-page status-publish has-post-thumbnail hentry" id="post-34">
 
-  <header class="entry-header has-text-align-center header-footer-group">
-    <div class="entry-header-inner section-inner medium">
-      <h1 class="entry-title" style="color: rgb(0, 0, 0);">Naming Compounds Quiz</h1>
-    </div><!-- .entry-header-inner -->
-  </header><!-- .entry-header -->
+    <header class="entry-header">
+      <div class="section-inner">
+        <h1 class="entry-title">Naming Compounds Quiz</h1>
+      </div>
+    </header>
 
-	<div class="post-inner">
+    <div class="post-inner">
+      <div class="entry-content">
 
-		<div class="entry-content">
-      <script>
-        function toggleRadioButtons(checkbox, radioGroupName, action) {
-            const radios = document.getElementsByName(radioGroupName);
-            for (let i = 0; i < radios.length; i++) {
-              if (action == 'disable') {
-                radios[i].disabled = true;
-              } else {
-                radios[i].disabled = false;
-              }
-            }
-        }
-      </script>
+        <p style="text-align: left; padding-bottom: -10px; margin-bottom: 0;">
+          Select your preferences below and click "Start" to give it a try!
+        </p>
 
-<p style="text-align: left; padding-bottom: -10px; margin-bottom: 0;">Select your preferences below and click 'Start' to give it a try!</p>
+        <!-- SETTINGS FORM -->
+        <form id="quizMakeForm" action="" method="post"> <table class="quiz"> <tbody>
+          <tr class="quiz" style="background-color: rgb(238, 238, 238); color: rgb(0, 0, 0);">
+            <td style="text-align: left; vertical-align: top; font-weight: bold;">Number of problems:</td>
+            <td style="text-align: left; vertical-align: top;">
+              <input type="radio" name="items" id="items_1" value="1" onclick="toggleRadioButtons(this, &quot;display&quot;, &quot;enable&quot;);">
+              <label for="items_1" style="display: inline; font-size: inherit;">&nbsp;1</label><br>
 
-<form id="quizMakeForm" action="" method="post">
+              <input type="radio" name="items" id="items_5" value="5" onclick="toggleRadioButtons(this, &quot;display&quot;, &quot;enable&quot;)">
+              <label for="items_5" style="display: inline; font-size: inherit;">&nbsp;5</label><br>
 
-  <table class="quiz">
-    <tbody>
-      <tr class="quiz" style="background-color: rgb(238, 238, 238); color: rgb(0, 0, 0);">
-        <td style="text-align: left; vertical-align: top; font-weight: bold;">Number of problems:</td>
-        <td style="text-align: left; vertical-align: top;">
-          <input type="radio" name="items" id="items_1" value="1" onclick="toggleRadioButtons(this, &quot;display&quot;, &quot;enable&quot;);"><label for="items_1" style="display: inline; font-size: inherit;">&nbsp;1</label><br>
-          <input type="radio" name="items" id="items_5" value="5" onclick="toggleRadioButtons(this, &quot;display&quot;, &quot;enable&quot;)"><label for="items_5" style="display: inline; font-size: inherit;">&nbsp;5</label><br>
-          <input type="radio" name="items" id="items_10" value="10" onclick="toggleRadioButtons(this, &quot;display&quot;, &quot;enable&quot;)"><label for="items_10" style="display: inline; font-size: inherit;">&nbsp;10</label><br>
-          <input type="radio" name="items" id="items_25" value="25" onclick="toggleRadioButtons(this, &quot;display&quot;, &quot;enable&quot;)" checked=""><label for="items_25" style="display: inline; font-size: inherit;">&nbsp;25</label><br>
-        </td>
-      </tr>
-      <tr class="quiz" style="background-color: rgb(255, 255, 255); color: rgb(0, 0, 0);">
-        <td style="text-align: left; vertical-align: top; font-weight: bold;">Question type(s):</td>
-        <td style="text-align: left; vertical-align: top;">
-          <input type="radio" name="questionType" value="naming" id="questionType_naming" checked=""><label for="questionType_naming" style="display: inline; font-size: inherit;">&nbsp;Names &amp; formulas</label><br>
-          <input type="radio" name="questionType" value="molarmass" id="questionType_molarmass"><label for="questionType_molarmass" style="display: inline; font-size: inherit;">&nbsp;Molar mass (aka formula weight)</label><br>
-          <input type="radio" name="questionType" value="both" id="questionType_both"><label for="questionType_both" style="display: inline; font-size: inherit;">&nbsp;Both</label><br>
-        </td>
-      </tr>
-      <tr class="quiz" style="background-color: rgb(238, 238, 238); color: rgb(0, 0, 0);">
-        <td style="text-align: left; vertical-align: top; font-weight: bold;">Compound types:</td>
-        <td style="text-align: left; vertical-align: top;">
-          <strong>Ionic compounds</strong><br>
-            <input type="checkbox" name="compounds[]" value="acid" id="compounds_acid" checked=""><label for="compounds_acid" style="display: inline; font-size: inherit;">&nbsp;Acids</label><br>
-            <input type="checkbox" name="compounds[]" value="fixedCharge" id="compounds_fixedCharge" checked=""><label for="compounds_fixedCharge" style="display: inline; font-size: inherit;">&nbsp;Ionic compounds with fixed charge monatomic cations (e.g., aluminum)</label><br>
-            <input type="checkbox" name="compounds[]" value="multiCharge" id="compounds_multiCharge" checked=""><label for="compounds_multiCharge" style="display: inline; font-size: inherit;">&nbsp;Ionic compounds with multiple charge monatomic cations (e.g., copper)</label><br>
-            <input type="checkbox" name="compounds[]" value="monoAnion" id="compounds_monoAnion" checked=""><label for="compounds_monoAnion" style="display: inline; font-size: inherit;">&nbsp;Ionic compounds with monatomic anions (e.g., chlorine)</label><br>
-            <input type="checkbox" name="compounds[]" value="commonPoly" id="compounds_commonPoly" checked=""><label for="compounds_commonPoly" style="display: inline; font-size: inherit;">&nbsp;Ionic compounds with common polyatomic ions</label><br>
-            <input type="checkbox" name="compounds[]" value="uncommonPoly" id="compounds_uncommonPoly" checked=""><label for="compounds_uncommonPoly" style="display: inline; font-size: inherit;">&nbsp;Ionic compounds with uncommon polyatomic ions</label><br>
-            <input type="checkbox" name="compounds[]" value="hydrate" id="compounds_hydrate"><label for="compounds_hydrate" style="display: inline; font-size: inherit;">&nbsp;Hydrates</label><br>
-          <strong>Covalent compounds</strong><br>
-            <input type="checkbox" name="compounds[]" value="diatomic" id="compounds_diatomic" checked=""><label for="compounds_diatomic" style="display: inline; font-size: inherit;">&nbsp;Diatomic gases</label><br>
-            <input type="checkbox" name="compounds[]" value="molecular" id="compounds_molecular" checked=""><label for="compounds_molecular" style="display: inline; font-size: inherit;">&nbsp;Molecular compounds</label><br>
-            <input type="checkbox" name="compounds[]" value="ionic" id="compounds_ionic"><label for="compounds_ionic" style="display: inline; font-size: inherit;">&nbsp;Polyatomic ions</label><br>
-            <input type="checkbox" name="compounds[]" value="organic" id="compounds_organic"><label for="compounds_organic" style="display: inline; font-size: inherit;">&nbsp;Simple hydrocarbons (first 10 alkanes)</label><br>
-        </td>
-      </tr>
-      <tr class="quiz" style="background-color: rgb(255, 255, 255); color: rgb(0, 0, 0);">
-        <td style="text-align: left; vertical-align: top; font-weight: bold;">Start with names or formulas:</td>
-        <td style="text-align: left; vertical-align: top;">
-          <input type="radio" name="problemType" value="names" id="problemType_names"><label for="problemType_names" style="display: inline; font-size: inherit;">&nbsp;Chemical formulas</label><br>
-          <input type="radio" name="problemType" value="formulas" id="problemType_formulas"><label for="problemType_formulas" style="display: inline; font-size: inherit;">&nbsp;Chemical names</label><br>
-          <input type="radio" name="problemType" value="both" id="problemType_both" checked=""><label for="problemType_both" style="display: inline; font-size: inherit;">&nbsp;Mix &amp; match (both formulas and names)</label><br>
-        </td>
-      </tr>
-      <tr class="quiz" style="background-color: rgb(238, 238, 238); color: rgb(0, 0, 0);">
-        <td style="text-align: left; vertical-align: top; font-weight: bold;">Question format:</td>
-        <td style="text-align: left; vertical-align: top;">
-          <input type="radio" name="qformat" value="fill" id="qformat_fill" checked=""><label for="qformat_fill" style="display: inline; font-size: inherit;">&nbsp;Fill-in-the-blank</label><br>
-          <input type="radio" name="qformat" value="mc" id="qformat_mc"><label for="qformat_mc" style="display: inline; font-size: inherit;">&nbsp;Multiple choice</label><br>
-        </td>
-      </tr>
-      <tr class="quiz" style="background-color: rgb(255, 255, 255); color: rgb(0, 0, 0);">
-        <td style="text-align: left; vertical-align: top; font-weight: bold;">Show periodic table:</td>
-        <td style="text-align: left; vertical-align: top;">
-          <input type="checkbox" name="ptable[]" value="true" id="ptable_true" checked=""><label for="ptable_true" style="display: inline; font-size: inherit;">&nbsp;Display pop-out periodic table on quiz</label><br>
-        </td>
-      </tr>
-      <tr class="quiz" style="background-color: rgb(238, 238, 238); color: rgb(0, 0, 0);">
-        <td style="text-align: left; vertical-align: top; font-weight: bold;">Show calculator:</td>
-        <td style="text-align: left; vertical-align: top;">
-          <input type="checkbox" name="calculator[]" value="true" id="calculator_true"><label for="calculator_true" style="display: inline; font-size: inherit;">&nbsp;Display pop-out calculator on quiz</label><br>
-        </td>
-      </tr>
-      <tr class="quiz" style="background-color: rgb(255, 255, 255); color: rgb(0, 0, 0);">
-        <td style="text-align: left; vertical-align: top; font-weight: bold;">Show solutions:</td>
-        <td style="text-align: left; vertical-align: top;">
-          <input type="checkbox" name="showSolutions[]" value="true" id="showSolutions_true" checked=""><label for="showSolutions_true" style="display: inline; font-size: inherit;">&nbsp;Display explanations and solution setups after quiz has been taken</label><br>
-        </td>
-      </tr>
-      <tr class="quiz" style="background-color: rgb(255, 255, 255); color: rgb(0, 0, 0);">
-        <td colspan="2" style="text-align: center;">
-          <button type="submit" style="position: sticky;" name="submit" value="Start!" onclick="document.getElementById(&quot;quizModal&quot;).style.display=&quot;block&quot;;">Start!</button>
-        </td>
-      </tr>
-    </tbody>
-  </table>
+              <input type="radio" name="items" id="items_10" value="10" onclick="toggleRadioButtons(this, &quot;display&quot;, &quot;enable&quot;)">
+              <label for="items_10" style="display: inline; font-size: inherit;">&nbsp;10</label><br>
 
-</form>
+              <input type="radio" name="items" id="items_25" value="25" onclick="toggleRadioButtons(this, &quot;display&quot;, &quot;enable&quot;)" checked>
+              <label for="items_25" style="display: inline; font-size: inherit;">&nbsp;25</label><br>
+            </td>
+          </tr>
 
+          <tr class="quiz" style="background-color: rgb(255, 255, 255); color: rgb(0, 0, 0);">
+            <td style="text-align: left; vertical-align: top; font-weight: bold;">Question type(s):</td>
+            <td style="text-align: left; vertical-align: top;">
+              <input type="radio" name="questionType" value="naming" id="questionType_naming" checked>
+              <label for="questionType_naming" style="display: inline; font-size: inherit;">&nbsp;Names &amp; formulas</label><br>
 
-<script id="quizMakeFormProcessingScript">
-  document.getElementById('quizMakeForm').addEventListener('submit', (e) => {
-    e.preventDefault();
+              <input type="radio" name="questionType" value="molarmass" id="questionType_molarmass">
+              <label for="questionType_molarmass" style="display: inline; font-size: inherit;">&nbsp;Molar mass (aka formula weight)</label><br>
 
-    const formData = new FormData(e.target);
-    const data = {};
+              <input type="radio" name="questionType" value="both" id="questionType_both">
+              <label for="questionType_both" style="display: inline; font-size: inherit;">&nbsp;Both</label><br>
+            </td>
+          </tr>
 
-    for (const [key, value] of formData.entries()) {
-      const cleanKey = key.endsWith('[]')
-        ? key.slice(0, -2)
-        : key;
+          <tr class="quiz" style="background-color: rgb(238, 238, 238); color: rgb(0, 0, 0);">
+            <td style="text-align: left; vertical-align: top; font-weight: bold;">Compound types:</td>
+            <td style="text-align: left; vertical-align: top;">
 
-      if (key.endsWith('[]')) {
-        if (!data[cleanKey]) {
-          data[cleanKey] = [];
-        }
-        data[cleanKey].push(value);
-      } else {
-        data[cleanKey] = value;
-      }
-    }
+              <strong>Ionic compounds</strong><br>
 
-    console.log(data);
+              <input type="checkbox" name="compounds[]" value="acid" id="compounds_acid" checked>
+              <label for="compounds_acid" style="display: inline; font-size: inherit;">&nbsp;Acids</label><br>
 
-    document.getElementById('quizModal').innerHTML = `
-      <h3>Submission Received!</h3>
-      <pre>${JSON.stringify(data, null, 2)}</pre>
-    `;
-  });
-</script>
+              <input type="checkbox" name="compounds[]" value="fixedCharge" id="compounds_fixedCharge" checked>
+              <label for="compounds_fixedCharge" style="display: inline; font-size: inherit;">&nbsp;Ionic compounds with fixed charge monatomic cations (e.g., aluminum)</label><br>
 
-      <div id="quizModal" class="quizModal">
-        <div class="quizModalContent" style="color: rgb(0, 0, 0); background-color: rgb(254, 254, 254);">
-        <div class="quizModalBody">
-          <div class="quizSpinner"></div>
-          <p style="margin-top: 300px; left: 50%; text-align: center;" id="spinnerText">Get ready!</p>
-        </div>
-        </div>
-    	</div>
+              <input type="checkbox" name="compounds[]" value="multiCharge" id="compounds_multiCharge" checked>
+              <label for="compounds_multiCharge" style="display: inline; font-size: inherit;">&nbsp;Ionic compounds with multiple charge monatomic cations (e.g., copper)</label><br>
 
-		</div><!-- .entry-content -->
-	</div><!-- .post-inner -->
+              <input type="checkbox" name="compounds[]" value="monoAnion" id="compounds_monoAnion" checked>
+              <label for="compounds_monoAnion" style="display: inline; font-size: inherit;">&nbsp;Ionic compounds with monatomic anions (e.g., chlorine)</label><br>
 
-	<div class="section-inner">
-	</div><!-- .section-inner -->
-	
-</article><!-- .post -->
-</main><!-- #site-content -->
+              <input type="checkbox" name="compounds[]" value="commonPoly" id="compounds_commonPoly" checked>
+              <label for="compounds_commonPoly" style="display: inline; font-size: inherit;">&nbsp;Ionic compounds with common polyatomic ions</label><br>
+
+              <input type="checkbox" name="compounds[]" value="uncommonPoly" id="compounds_uncommonPoly" checked>
+              <label for="compounds_uncommonPoly" style="display: inline; font-size: inherit;">&nbsp;Ionic compounds with uncommon polyatomic ions</label><br>
+
+              <input type="checkbox" name="compounds[]" value="hydrate" id="compounds_hydrate">
+              <label for="compounds_hydrate" style="display: inline; font-size: inherit;">&nbsp;Hydrates</label><br>
+
+              <strong>Covalent compounds</strong><br>
+
+              <input type="checkbox" name="compounds[]" value="diatomic" id="compounds_diatomic" checked>
+              <label for="compounds_diatomic" style="display: inline; font-size: inherit;">&nbsp;Diatomic gases</label><br>
+
+              <input type="checkbox" name="compounds[]" value="molecular" id="compounds_molecular" checked>
+              <label for="compounds_molecular" style="display: inline; font-size: inherit;">&nbsp;Molecular compounds</label><br>
+
+              <input type="checkbox" name="compounds[]" value="ionic" id="compounds_ionic">
+              <label for="compounds_ionic" style="display: inline; font-size: inherit;">&nbsp;Polyatomic ions</label><br>
+
+              <input type="checkbox" name="compounds[]" value="organic" id="compounds_organic">
+              <label for="compounds_organic" style="display: inline; font-size: inherit;">&nbsp;Simple hydrocarbons (first 10 alkanes)</label><br>
+            </td>
+          </tr>
+
+          <tr class="quiz" style="background-color: rgb(255, 255, 255); color: rgb(0, 0, 0);">
+            <td style="text-align: left; vertical-align: top; font-weight: bold;">Start with names or formulas:</td>
+            <td style="text-align: left; vertical-align: top;">
+              <input type="radio" name="problemType" value="names" id="problemType_names">
+              <label for="problemType_names" style="display: inline; font-size: inherit;">&nbsp;Chemical formulas</label><br>
+
+              <input type="radio" name="problemType" value="formulas" id="problemType_formulas">
+              <label for="problemType_formulas" style="display: inline; font-size: inherit;">&nbsp;Chemical names</label><br>
+
+              <input type="radio" name="problemType" value="both" id="problemType_both" checked>
+              <label for="problemType_both" style="display: inline; font-size: inherit;">&nbsp;Mix &amp; match (both formulas and names)</label><br>
+            </td>
+          </tr>
+
+          <tr class="quiz" style="background-color: rgb(238, 238, 238); color: rgb(0, 0, 0);">
+            <td style="text-align: left; vertical-align: top; font-weight: bold;">Question format:</td>
+            <td style="text-align: left; vertical-align: top;">
+              <input type="radio" name="qformat" value="fill" id="qformat_fill" checked>
+              <label for="qformat_fill" style="display: inline; font-size: inherit;">&nbsp;Fill-in-the-blank</label><br>
+
+              <input type="radio" name="qformat" value="mc" id="qformat_mc">
+              <label for="qformat_mc" style="display: inline; font-size: inherit;">&nbsp;Multiple choice</label><br>
+            </td>
+          </tr>
+
+          <tr class="quiz" style="background-color: rgb(255, 255, 255); color: rgb(0, 0, 0);">
+            <td style="text-align: left; vertical-align: top; font-weight: bold;">Show periodic table:</td>
+            <td style="text-align: left; vertical-align: top;">
+              <input type="checkbox" name="ptable[]" value="true" id="ptable_true" checked>
+              <label for="ptable_true" style="display: inline; font-size: inherit;">&nbsp;Display pop-out periodic table on quiz</label><br>
+            </td>
+          </tr>
+
+          <tr class="quiz" style="background-color: rgb(238, 238, 238); color: rgb(0, 0, 0);">
+            <td style="text-align: left; vertical-align: top; font-weight: bold;">Show calculator:</td>
+            <td style="text-align: left; vertical-align: top;">
+              <input type="checkbox" name="calculator[]" value="true" id="calculator_true">
+              <label for="calculator_true" style="display: inline; font-size: inherit;">&nbsp;Display pop-out calculator on quiz</label><br>
+            </td>
+          </tr>
+
+          <tr class="quiz" style="background-color: rgb(255, 255, 255); color: rgb(0, 0, 0);">
+            <td style="text-align: left; vertical-align: top; font-weight: bold;">Show solutions:</td>
+            <td style="text-align: left; vertical-align: top;">
+              <input type="checkbox" name="showSolutions[]" value="true" id="showSolutions_true" checked>
+              <label for="showSolutions_true" style="display: inline; font-size: inherit;">&nbsp;Display explanations and solution setups after quiz has been taken</label><br>
+            </td>
+          </tr>
+
+          <tr>
+            <td colspan="2" style="text-align:center;">
+              <button type="submit">Start!</button>
+            </td>
+          </tr>
+
+        </tbody>
+
+        </table> </form>
+
+        <!-- ANSWER FORM -->
+        <form id="answerForm" class="hidden"></form>
+
+        <!-- RESULTS -->
+        <div id="quizResults" class="hidden"></div>
+
+      </div>
+    </div>
+
+  </article>
+
+</main>
 
 
 	<div class="footer-nav-widgets-wrapper header-footer-group">
@@ -234,7 +239,6 @@
 		
 		</div><!-- .footer-inner -->
 	</div><!-- .footer-nav-widgets-wrapper -->
-
 	
   <footer id="site-footer" class="header-footer-group">
 
@@ -253,34 +257,6 @@
 
   </footer><!-- #site-footer -->
 
-<script type="text/javascript">
-    (function () {
-        if (!document.getElementsByClassName('blocks-gallery-item').length && document.getElementById('site-content')) {
-            var browserHeight = window.innerHeight,
-                contentHeight = document.getElementById('site-header').clientHeight + document.getElementById('site-content').clientHeight + document.getElementById('site-footer').clientHeight;
-            if (typeof document.getElementsByClassName('footer-nav-widgets-wrapper')[0] !== 'undefined') {
-                contentHeight += document.getElementsByClassName('footer-nav-widgets-wrapper')[0].clientHeight;
-                contentHeight += parseInt(window.getComputedStyle(document.getElementsByClassName('footer-nav-widgets-wrapper')[0]).getPropertyValue('margin-top'));
-            } else {
-                contentHeight += parseInt(window.getComputedStyle(document.getElementById('site-footer')).getPropertyValue('margin-top'));
-            }
-            if (typeof document.getElementsByClassName('admin-bar')[0] !== 'undefined') {
-            	var wpadminbar_timer = setTimeout(function wpadminbar_check() {
-                    if (document.getElementById('wpadminbar') == null) {
-            			wpadminbar_timer = setTimeout(wpadminbar_check, 50);
-            		} else {
-                        contentHeight += document.getElementById('wpadminbar').clientHeight;
-                        if (browserHeight > contentHeight) {
-                            document.getElementById('site-content').style.height = (document.getElementById('site-content').clientHeight + browserHeight - contentHeight) + 'px'
-                        }
-            		}
-            	}, 50);
-            } else if (browserHeight > contentHeight) {
-                document.getElementById('site-content').style.height = (document.getElementById('site-content').clientHeight + browserHeight - contentHeight) + 'px'
-            }
-        }
-    }());
-</script>
 
 
 <div style="text-align: right;">
@@ -291,7 +267,13 @@
 ">Periodic Table</button>
 
 <!-- modal overlay -->
-<div class="ptable-modal-overlay" id="ptableOverlay" aria-hidden="true">
+<div class="ptable-modal-overlay" id="ptableOverlay" aria-hidden="true" onclick="
+      const overlay = document.getElementById('ptableOverlay');
+  if (event.target === overlay) {
+      overlay.hidden = true;
+      overlay.classList.remove('open');
+  }
+">
   <div class="ptable-modal" id="ptable" role="dialog" aria-modal="true" aria-labelledby="ptableTitle">
     <div class="ptable-modal-header">
       <div class="ptable-modal-title" id="ptableTitle">Periodic Table of the Elements</div>
@@ -306,11 +288,14 @@
 	<!-- begin periodic table -->
     <div class="ptable-table" id="ptableGrid">
 
-<div class="ptable-element ptable-unknown" style="grid-column: 19; grid-row: 8; background-color: white;" ;="" tabindex="0">
+<div class="ptable-element ptable-spacer" style="grid-column: 2; grid-row: 9;" ;="" tabindex="0">
 <div class="ptable-number">11</div>
 <div class="ptable-symbol">JC</div>
 <div class="ptable-mass">14</div>
 <div class="ptable-name-smallest">garshwshrnn</div>
+</div>
+<div class="ptable-element ptable-spacer" style="grid-column: 19; grid-row: 7;" ;="" tabindex="0">
+<div class="ptable-number"></div>
 </div>
 
 <div class="ptable-element ptable-nonmetal" style="grid-column: 1; grid-row: 1" ;="" tabindex="0">
@@ -1054,6 +1039,1479 @@
   </div> <!-- end modal -->
 </div> <!-- end overlay -->
 </div>
+
+<script>
+"use strict";
+
+/* ============================================================
+   STATE
+   ============================================================ */
+
+let currentQuizSettings = null;
+let currentQuestions = [];
+
+
+/* ============================================================
+   CREDITS MODAL
+   ============================================================ */
+
+const menuModal = document.getElementById("menuModal");
+
+document.getElementById("mobile-nav-toggle").addEventListener("click", () => {
+  menuModal.classList.add("is-open");
+  menuModal.setAttribute("aria-hidden", "false");
+  document.body.classList.add("menu-open");
+});
+
+document.getElementById("close-nav-toggle").addEventListener("click", closeMenu);
+
+menuModal.addEventListener("click", event => {
+  if (event.target === menuModal) {
+    closeMenu();
+  }
+});
+
+function closeMenu() {
+  menuModal.classList.remove("is-open");
+  menuModal.setAttribute("aria-hidden", "true");
+  document.body.classList.remove("menu-open");
+}
+
+
+/* ============================================================
+   COMPOUND DATABASE
+   ============================================================
+
+   Each entry:
+   {
+     formula,
+     name,
+     type,
+     explanation
+   }
+
+   ============================================================ */
+
+const compoundDatabase = [
+
+  /* Fixed-charge ionic */
+
+  {
+    formula: "NaCl",
+    name: "sodium chloride",
+    type: "fixedCharge",
+    explanation: "Sodium forms Na⁺ and chloride forms Cl⁻, giving a 1:1 ratio."
+  },
+
+  {
+    formula: "MgO",
+    name: "magnesium oxide",
+    type: "fixedCharge",
+    explanation: "Mg²⁺ and O²⁻ combine in a 1:1 ratio."
+  },
+
+  {
+    formula: "Al2O3",
+    name: "aluminum oxide",
+    type: "fixedCharge",
+    explanation: "Al³⁺ and O²⁻ require a 2:3 ratio to balance charge."
+  },
+
+  {
+    formula: "CaF2",
+    name: "calcium fluoride",
+    type: "fixedCharge",
+    explanation: "Ca²⁺ requires two F⁻ ions."
+  },
+
+  {
+    formula: "K2S",
+    name: "potassium sulfide",
+    type: "fixedCharge",
+    explanation: "Two K⁺ ions balance one S²⁻ ion."
+  },
+
+  {
+    formula: "Ca3N2",
+    name: "calcium nitride",
+    type: "fixedCharge",
+    explanation: "Three Ca²⁺ ions balance two N³⁻ ions."
+  },
+
+  {
+    formula: "Na3P",
+    name: "sodium phosphide",
+    type: "fixedCharge",
+    explanation: "Three Na⁺ ions balance one P³⁻ ion."
+  },
+
+  {
+    formula: "Li2O",
+    name: "lithium oxide",
+    type: "fixedCharge",
+    explanation: "Two Li⁺ ions balance one O²⁻ ion."
+  },
+
+
+  /* Multiple-charge ionic */
+
+  {
+    formula: "FeCl2",
+    name: "iron (II) chloride",
+    type: "multiCharge",
+    explanation: "Iron is Fe²⁺ in this compound; two Cl⁻ ions balance it."
+  },
+
+  {
+    formula: "FeCl3",
+    name: "iron (III) chloride",
+    type: "multiCharge",
+    explanation: "Iron is Fe³⁺ in this compound; three Cl⁻ ions balance it."
+  },
+
+  {
+    formula: "CuCl",
+    name: "copper (I) chloride",
+    type: "multiCharge",
+    explanation: "Copper is Cu⁺ and combines 1:1 with chloride."
+  },
+
+  {
+    formula: "CuCl2",
+    name: "copper (II) chloride",
+    type: "multiCharge",
+    explanation: "Copper is Cu²⁺ and requires two chloride ions."
+  },
+
+  {
+    formula: "NiF2",
+    name: "nickel (II) fluoride",
+    type: "multiCharge",
+    explanation: "Nickel is Ni²⁺ and requires two fluoride ions."
+  },
+
+  {
+    formula: "PbO",
+    name: "lead (II) oxide",
+    type: "multiCharge",
+    explanation: "Lead is Pb²⁺ and oxygen is O²⁻."
+  },
+
+  {
+    formula: "PbO2",
+    name: "lead (IV) oxide",
+    type: "multiCharge",
+    explanation: "Lead is Pb⁴⁺ and requires two O²⁻ ions."
+  },
+
+  {
+    formula: "Hg2O",
+    name: "mercury (I) oxide",
+    type: "multiCharge",
+    explanation: "The mercury(I) ion is Hg2²⁺, which combines with one O²⁻."
+  },
+
+  {
+    formula: "HgO",
+    name: "mercury (II) oxide",
+    type: "multiCharge",
+    explanation: "Hg²⁺ combines with O²⁻ in a 1:1 ratio."
+  },
+
+
+  /* Monatomic anions */
+
+  {
+    formula: "ZnS",
+    name: "zinc sulfide",
+    type: "monoAnion",
+    explanation: "Zn²⁺ and S²⁻ combine in a 1:1 ratio."
+  },
+
+  {
+    formula: "ZnBr2",
+    name: "zinc bromide",
+    type: "monoAnion",
+    explanation: "Zn²⁺ requires two Br⁻ ions."
+  },
+
+  {
+    formula: "Ag3N",
+    name: "silver nitride",
+    type: "monoAnion",
+    explanation: "Three Ag⁺ ions balance one N³⁻ ion."
+  },
+
+  {
+    formula: "Al2S3",
+    name: "aluminum sulfide",
+    type: "monoAnion",
+    explanation: "Two Al³⁺ ions balance three S²⁻ ions."
+  },
+
+
+  /* Common polyatomic */
+
+  {
+    formula: "Ca(CN)2",
+    name: "calcium cyanide",
+    type: "commonPoly",
+    explanation: "Ca²⁺ requires two cyanide ions, CN⁻."
+  },
+
+  {
+    formula: "CaSO4",
+    name: "calcium sulfate",
+    type: "commonPoly",
+    explanation: "Ca²⁺ and sulfate SO4²⁻ combine 1:1."
+  },
+
+  {
+    formula: "NaNO3",
+    name: "sodium nitrate",
+    type: "commonPoly",
+    explanation: "Na⁺ and nitrate NO3⁻ combine 1:1."
+  },
+
+  {
+    formula: "KNO3",
+    name: "potassium nitrate",
+    type: "commonPoly",
+    explanation: "K⁺ and nitrate NO3⁻ combine 1:1."
+  },
+
+  {
+    formula: "Na2CO3",
+    name: "sodium carbonate",
+    type: "commonPoly",
+    explanation: "Two Na⁺ ions balance one carbonate CO3²⁻ ion."
+  },
+
+  {
+    formula: "Cs2CO3",
+    name: "cesium carbonate",
+    type: "commonPoly",
+    explanation: "Two Cs⁺ ions balance one carbonate CO3²⁻ ion."
+  },
+
+  {
+    formula: "Ni3(PO4)2",
+    name: "nickel (II) phosphate",
+    type: "commonPoly",
+    explanation: "Three Ni²⁺ ions balance two PO4³⁻ ions."
+  },
+
+  {
+    formula: "Pb(C2O4)",
+    name: "lead (II) oxalate",
+    type: "commonPoly",
+    explanation: "Pb²⁺ combines 1:1 with oxalate C2O4²⁻."
+  },
+
+  {
+    formula: "CuSO4",
+    name: "copper (II) sulfate",
+    type: "commonPoly",
+    explanation: "Cu²⁺ combines 1:1 with sulfate SO4²⁻."
+  },
+
+  {
+    formula: "Al(NO3)3",
+    name: "aluminum nitrate",
+    type: "commonPoly",
+    explanation: "Al³⁺ requires three nitrate ions."
+  },
+
+  {
+    formula: "Ca(OH)2",
+    name: "calcium hydroxide",
+    type: "commonPoly",
+    explanation: "Ca²⁺ requires two hydroxide OH⁻ ions."
+  },
+
+
+  /* Uncommon polyatomic */
+
+  {
+    formula: "KMnO4",
+    name: "potassium permanganate",
+    type: "uncommonPoly",
+    explanation: "K⁺ combines with the permanganate ion MnO4⁻."
+  },
+
+  {
+    formula: "NaClO",
+    name: "sodium hypochlorite",
+    type: "uncommonPoly",
+    explanation: "Na⁺ combines with hypochlorite ClO⁻."
+  },
+
+  {
+    formula: "NaClO2",
+    name: "sodium chlorite",
+    type: "uncommonPoly",
+    explanation: "Na⁺ combines with chlorite ClO2⁻."
+  },
+
+  {
+    formula: "NaClO3",
+    name: "sodium chlorate",
+    type: "uncommonPoly",
+    explanation: "Na⁺ combines with chlorate ClO3⁻."
+  },
+
+  {
+    formula: "NaClO4",
+    name: "sodium perchlorate",
+    type: "uncommonPoly",
+    explanation: "Na⁺ combines with perchlorate ClO4⁻."
+  },
+
+
+  /* Acids */
+
+  {
+    formula: "HCl",
+    name: "hydrochloric acid",
+    type: "acid",
+    explanation: "HCl is hydrochloric acid when dissolved in water."
+  },
+
+  {
+    formula: "HBr",
+    name: "hydrobromic acid",
+    type: "acid",
+    explanation: "HBr is hydrobromic acid in aqueous solution."
+  },
+
+  {
+    formula: "HI",
+    name: "hydroiodic acid",
+    type: "acid",
+    explanation: "HI is hydroiodic acid in aqueous solution."
+  },
+
+  {
+    formula: "HNO3",
+    name: "nitric acid",
+    type: "acid",
+    explanation: "The nitrate ion forms nitric acid with H⁺."
+  },
+
+  {
+    formula: "H2SO4",
+    name: "sulfuric acid",
+    type: "acid",
+    explanation: "The sulfate ion forms sulfuric acid with two H⁺ ions."
+  },
+
+  {
+    formula: "H2SO3",
+    name: "sulfurous acid",
+    type: "acid",
+    explanation: "The sulfite ion forms sulfurous acid."
+  },
+
+  {
+    formula: "H3PO4",
+    name: "phosphoric acid",
+    type: "acid",
+    explanation: "The phosphate ion forms phosphoric acid with three H⁺ ions."
+  },
+
+  {
+    formula: "H3BO3",
+    name: "boric acid",
+    type: "acid",
+    explanation: "H3BO3 is commonly named boric acid."
+  },
+
+  {
+    formula: "HClO3",
+    name: "chloric acid",
+    type: "acid",
+    explanation: "The chlorate ion forms chloric acid."
+  },
+
+  {
+    formula: "HIO3",
+    name: "iodic acid",
+    type: "acid",
+    explanation: "The iodate ion forms iodic acid."
+  },
+
+
+  /* Diatomic gases */
+
+  {
+    formula: "H2",
+    name: "hydrogen gas",
+    type: "diatomic",
+    explanation: "Elemental hydrogen exists naturally as H2."
+  },
+
+  {
+    formula: "N2",
+    name: "nitrogen gas",
+    type: "diatomic",
+    explanation: "Elemental nitrogen exists naturally as N2."
+  },
+
+  {
+    formula: "O2",
+    name: "oxygen gas",
+    type: "diatomic",
+    explanation: "Elemental oxygen exists naturally as O2."
+  },
+
+  {
+    formula: "F2",
+    name: "fluorine gas",
+    type: "diatomic",
+    explanation: "Elemental fluorine exists naturally as F2."
+  },
+
+  {
+    formula: "Cl2",
+    name: "chlorine gas",
+    type: "diatomic",
+    explanation: "Elemental chlorine exists naturally as Cl2."
+  },
+
+  {
+    formula: "Br2",
+    name: "bromine",
+    type: "diatomic",
+    explanation: "Elemental bromine exists as Br2."
+  },
+
+  {
+    formula: "I2",
+    name: "iodine",
+    type: "diatomic",
+    explanation: "Elemental iodine exists as I2."
+
+
+  },
+
+
+  /* Molecular compounds */
+
+  {
+    formula: "CO",
+    name: "carbon monoxide",
+    type: "molecular",
+    explanation: "One carbon and one oxygen give carbon monoxide."
+  },
+
+  {
+    formula: "CO2",
+    name: "carbon dioxide",
+    type: "molecular",
+    explanation: "One carbon and two oxygen atoms give carbon dioxide."
+  },
+
+  {
+    formula: "N2O",
+    name: "dinitrogen monoxide",
+    type: "molecular",
+    explanation: "The prefixes di- and mono- indicate two nitrogen atoms and one oxygen atom."
+  },
+
+  {
+    formula: "N2O4",
+    name: "dinitrogen tetroxide",
+    type: "molecular",
+    explanation: "Two nitrogen atoms and four oxygen atoms."
+  },
+
+  {
+    formula: "PCl3",
+    name: "phosphorus trichloride",
+    type: "molecular",
+    explanation: "Three chlorine atoms require the prefix tri-."
+  },
+
+  {
+    formula: "PCl5",
+    name: "phosphorus pentachloride",
+    type: "molecular",
+    explanation: "Five chlorine atoms require the prefix penta-."
+  },
+
+  {
+    formula: "AsF5",
+    name: "arsenic pentafluoride",
+    type: "molecular",
+    explanation: "Five fluorine atoms require the prefix penta-."
+  },
+
+  {
+    formula: "Cl2O7",
+    name: "dichlorine heptoxide",
+    type: "molecular",
+    explanation: "Two chlorine atoms and seven oxygen atoms."
+  },
+
+  {
+    formula: "SF6",
+    name: "sulfur hexafluoride",
+    type: "molecular",
+    explanation: "Six fluorine atoms require the prefix hexa-."
+  },
+
+  {
+    formula: "SiO2",
+    name: "silicon dioxide",
+    type: "molecular",
+    explanation: "One silicon atom and two oxygen atoms."
+  },
+
+
+  /* Simple hydrocarbons */
+
+  {
+    formula: "CH4",
+    name: "methane",
+    type: "organic",
+    explanation: "CH4 is the first alkane, methane."
+  },
+
+  {
+    formula: "C2H6",
+    name: "ethane",
+    type: "organic",
+    explanation: "C2H6 is the second alkane, ethane."
+  },
+
+  {
+    formula: "C3H8",
+    name: "propane",
+    type: "organic",
+    explanation: "C3H8 is the third alkane, propane."
+  },
+
+  {
+    formula: "C4H10",
+    name: "butane",
+    type: "organic",
+    explanation: "C4H10 is the fourth alkane, butane."
+  },
+
+  {
+    formula: "C5H12",
+    name: "pentane",
+    type: "organic",
+    explanation: "C5H12 is the fifth alkane, pentane."
+  },
+
+  {
+    formula: "C6H14",
+    name: "hexane",
+    type: "organic",
+    explanation: "C6H14 is the sixth alkane, hexane."
+  },
+
+  {
+    formula: "C7H16",
+    name: "heptane",
+    type: "organic",
+    explanation: "C7H16 is the seventh alkane, heptane."
+  },
+
+  {
+    formula: "C8H18",
+    name: "octane",
+    type: "organic",
+    explanation: "C8H18 is the eighth alkane, octane."
+  },
+
+  {
+    formula: "C9H20",
+    name: "nonane",
+    type: "organic",
+    explanation: "C9H20 is the ninth alkane, nonane."
+  },
+
+  {
+    formula: "C10H22",
+    name: "decane",
+    type: "organic",
+    explanation: "C10H22 is the tenth alkane, decane."
+  }
+
+];
+
+
+/* ============================================================
+   ATOMIC MASSES
+   ============================================================ */
+
+const atomicMasses = {
+  H: 1.008,
+  He: 4.003,
+  Li: 6.941,
+  Be: 9.012,
+  B: 10.811,
+  C: 12.011,
+  N: 14.007,
+  O: 15.999,
+  F: 18.998,
+  Na: 22.990,
+  Mg: 24.305,
+  Al: 26.982,
+  Si: 28.086,
+  P: 30.974,
+  S: 32.065,
+  Cl: 35.453,
+  K: 39.098,
+  Ca: 40.078,
+  Fe: 55.845,
+  Ni: 58.693,
+  Cu: 63.546,
+  Zn: 65.38,
+  Br: 79.904,
+  Ag: 107.868,
+  I: 126.904,
+  Cs: 132.905,
+  Ba: 137.327,
+  Pt: 195.084,
+  Au: 196.967,
+  Hg: 200.590,
+  Pb: 207.2
+};
+
+
+/* ============================================================
+   FORM UTILITIES
+   ============================================================ */
+
+function getQuizSettings(form) {
+  const data = {};
+  const formData = new FormData(form);
+
+  for (const [key, value] of formData.entries()) {
+    const cleanKey = key.endsWith("[]")
+      ? key.slice(0, -2)
+      : key;
+
+    if (key.endsWith("[]")) {
+      if (!Array.isArray(data[cleanKey])) {
+        data[cleanKey] = [];
+      }
+      data[cleanKey].push(value);
+    } else {
+      data[cleanKey] = value;
+    }
+  }
+
+  return data;
+}
+
+
+/* ============================================================
+   START QUIZ
+   ============================================================ */
+
+document.getElementById("quizMakeForm").addEventListener("submit", event => {
+  event.preventDefault();
+
+  const settings = getQuizSettings(event.currentTarget);
+
+  currentQuizSettings = settings;
+  currentQuestions = generateQuestions(settings);
+
+  if (!currentQuestions.length) {
+    return;
+  }
+
+  document.getElementById("quizMakeForm").classList.add("hidden");
+  document.getElementById("quizResults").classList.add("hidden");
+
+  buildAnswerForm(currentQuestions);
+
+  const firstAnswer = document.querySelector("#answerForm input[name='answers[1]']");
+
+  if (firstAnswer) {
+    setTimeout(() => firstAnswer.focus(), 0);
+  }
+});
+
+
+/* ============================================================
+   GENERATE QUESTIONS
+   ============================================================ */
+
+function generateQuestions(settings) {
+
+  const count = Math.max(1, parseInt(settings.items, 10) || 25);
+
+  let selectedTypes = settings.compounds || [];
+
+  if (!Array.isArray(selectedTypes)) {
+    selectedTypes = [selectedTypes];
+  }
+
+  let available = compoundDatabase.filter(compound =>
+    selectedTypes.includes(compound.type)
+  );
+
+  if (!available.length) {
+    alert("No compounds were found for the selected compound types.");
+    return [];
+  }
+
+  available = shuffle([...available]);
+
+  const questions = [];
+
+  const questionType = settings.questionType || "naming";
+  const qformat = settings.qformat || "fill";
+
+  for (let i = 0; i < count; i++) {
+
+    const compound = available[i % available.length];
+
+    let mode;
+
+    if (settings.problemType === "names") {
+      mode = "formulaToName";
+    } else if (settings.problemType === "formulas") {
+      mode = "nameToFormula";
+    } else {
+      mode = Math.random() < 0.5
+        ? "formulaToName"
+        : "nameToFormula";
+    }
+
+    /*
+     * Molar-mass questions are handled separately.
+     */
+    if (questionType === "molarmass") {
+      mode = "molarMass";
+    } else if (questionType === "both" && Math.random() < 0.33) {
+      mode = "molarMass";
+    }
+
+    let display;
+    let answer;
+
+    if (mode === "formulaToName") {
+      display = formatFormula(compound.formula);
+      answer = compound.name;
+    } else if (mode === "nameToFormula") {
+      display = escapeHtml(compound.name);
+      answer = compound.formula;
+    } else {
+      display = formatFormula(compound.formula);
+      answer = calculateMolarMass(compound.formula).toFixed(2) + " g/mol";
+    }
+
+    questions.push({
+      number: i + 1,
+      display,
+      answer,
+      formula: compound.formula,
+      name: compound.name,
+      type: compound.type,
+      mode,
+      qformat,
+      explanation: compound.explanation
+    });
+  }
+
+  return questions;
+}
+
+
+/* ============================================================
+   BUILD ANSWER FORM
+   ============================================================ */
+
+function buildAnswerForm(questions) {
+
+  const form = document.getElementById("answerForm");
+
+  form.innerHTML = "";
+  form.classList.remove("hidden");
+
+  const table = document.createElement("table");
+  table.className = "quiz-table";
+
+  const thead = document.createElement("thead");
+
+  thead.innerHTML = `
+    <tr>
+      <th>#</th>
+      <th>Compound</th>
+      <th>Name or Formula</th>
+    </tr>
+  `;
+
+  table.appendChild(thead);
+
+  const tbody = document.createElement("tbody");
+
+  questions.forEach(question => {
+
+    const row = document.createElement("tr");
+
+    const placeholder =
+      question.mode === "formulaToName"
+        ? "compound name?"
+        : question.mode === "nameToFormula"
+          ? "compound formula?"
+          : "molar mass?";
+
+    let answerControl;
+
+    if (question.qformat === "mc") {
+      answerControl = buildMultipleChoice(question, questions);
+    } else {
+      answerControl = document.createElement("input");
+      answerControl.type = "text";
+      answerControl.name = `answers[${question.number}]`;
+      answerControl.id = `answers_${question.number}`;
+      answerControl.placeholder = placeholder;
+      answerControl.autocomplete = "off";
+      answerControl.spellcheck = false;
+      answerControl.size = 24;
+    }
+
+    const numberCell = document.createElement("td");
+    numberCell.textContent = question.number + ".";
+
+    const compoundCell = document.createElement("td");
+    compoundCell.innerHTML = question.display;
+
+    const answerCell = document.createElement("td");
+    answerCell.appendChild(answerControl);
+
+    row.appendChild(numberCell);
+    row.appendChild(compoundCell);
+    row.appendChild(answerCell);
+
+    tbody.appendChild(row);
+  });
+
+  const submitRow = document.createElement("tr");
+  submitRow.className = "submit-row";
+
+  const submitCell = document.createElement("td");
+  submitCell.colSpan = 3;
+  submitCell.innerHTML = `<button type="submit">Submit Quiz</button>`;
+
+  submitRow.appendChild(submitCell);
+  tbody.appendChild(submitRow);
+
+  table.appendChild(tbody);
+  form.appendChild(table);
+
+  form.onsubmit = event => {
+    event.preventDefault();
+    gradeQuiz();
+  };
+}
+
+
+/* ============================================================
+   MULTIPLE CHOICE
+   ============================================================ */
+
+function buildMultipleChoice(question, allQuestions) {
+
+  const wrapper = document.createElement("div");
+
+  const correct = question.answer;
+
+  const candidates = new Set([correct]);
+
+  const possibleAnswers = allQuestions
+    .filter(q => q !== question && q.mode === question.mode)
+    .map(q => q.answer);
+
+  shuffle(possibleAnswers);
+
+  for (const answer of possibleAnswers) {
+    if (candidates.size >= 4) {
+      break;
+    }
+    candidates.add(answer);
+  }
+
+  while (candidates.size < 4) {
+    candidates.add(generateDistractor(question));
+  }
+
+  const options = shuffle([...candidates]);
+
+  options.forEach((option, index) => {
+
+    const label = document.createElement("label");
+    label.style.display = "block";
+    label.style.marginBottom = "5px";
+
+    const input = document.createElement("input");
+
+    input.type = "radio";
+    input.name = `answers[${question.number}]`;
+    input.value = option;
+
+    if (index === 0) {
+      input.setAttribute("data-first", "true");
+    }
+
+    label.appendChild(input);
+
+    const text = document.createTextNode(
+      " " + option
+    );
+
+    label.appendChild(text);
+
+    wrapper.appendChild(label);
+  });
+
+  return wrapper;
+}
+
+
+function generateDistractor(question) {
+
+  if (question.mode === "formulaToName") {
+    return question.name + " (different)";
+  }
+
+  if (question.mode === "nameToFormula") {
+    return question.formula + "X";
+  }
+
+  const mass = parseFloat(question.answer);
+
+  if (!Number.isNaN(mass)) {
+    return (mass + 1).toFixed(2) + " g/mol";
+  }
+
+  return "0.00 g/mol";
+}
+
+
+/* ============================================================
+   GRADE QUIZ
+   ============================================================ */
+
+function gradeQuiz() {
+
+  let score = 0;
+
+  const results = currentQuestions.map(question => {
+
+    let userAnswer = "";
+
+    if (question.qformat === "mc") {
+
+      const selected = document.querySelector(
+        `input[name="answers[${question.number}]"]:checked`
+      );
+
+      userAnswer = selected ? selected.value : "";
+
+    } else {
+
+      const input = document.getElementById(
+        `answers_${question.number}`
+      );
+
+      userAnswer = input
+        ? input.value.trim()
+        : "";
+    }
+
+    const correct = answersMatch(
+      userAnswer,
+      question.answer,
+      question.mode
+    );
+
+    if (correct) {
+      score++;
+    }
+
+    return {
+      number: question.number,
+      question,
+      userAnswer,
+      correct
+    };
+  });
+
+  showResults(score, currentQuestions.length, results);
+}
+
+
+/* ============================================================
+   ANSWER CHECKING
+   ============================================================ */
+
+function answersMatch(user, correct, mode) {
+
+  if (!user || !correct) {
+    return false;
+  }
+
+  if (mode === "molarMass") {
+
+    const userMass = parseFloat(
+      String(user).replace(/[^0-9.-]/g, "")
+    );
+
+    const correctMass = parseFloat(
+      String(correct).replace(/[^0-9.-]/g, "")
+    );
+
+    if (
+      Number.isFinite(userMass) &&
+      Number.isFinite(correctMass)
+    ) {
+      return Math.abs(userMass - correctMass) <= 0.05;
+    }
+
+    return false;
+  }
+
+  return normalizeText(user) === normalizeText(correct);
+}
+
+
+function normalizeText(value) {
+
+  return String(value || "")
+    .trim()
+    .toLowerCase()
+    .replace(/\s+/g, " ")
+    .replace(/[−–—]/g, "-")
+    .replace(/\s*\(\s*/g, " (")
+    .replace(/\s*\)\s*/g, ")")
+    .replace(/\s*,\s*/g, ",");
+}
+
+
+/* ============================================================
+   RESULTS
+   ============================================================ */
+
+function showResults(score, total, results) {
+
+  document.getElementById("answerForm").classList.add("hidden");
+
+  const resultsContainer = document.getElementById("quizResults");
+
+  const percentage = total
+    ? Math.round(score / total * 100)
+    : 0;
+
+  let rows = "";
+
+  results.forEach(result => {
+
+    const q = result.question;
+
+    const background =
+      result.number % 2 === 0
+        ? "#eee"
+        : "#fff";
+
+    let resultHTML;
+
+    if (result.correct) {
+
+      resultHTML = `
+        <span class="correct">Correct!</span>
+      `;
+
+    } else {
+
+      const answerLabel =
+        q.mode === "formulaToName"
+          ? "name"
+          : q.mode === "nameToFormula"
+            ? "formula"
+            : "molar mass";
+
+      resultHTML = `
+        <span class="incorrect">Incorrect!</span>
+        <br>
+        Correct ${answerLabel}:
+        <strong>${formatAnswer(q.answer, q.mode)}</strong>
+      `;
+
+      if (
+        currentQuizSettings &&
+        Array.isArray(currentQuizSettings.showSolutions) &&
+        currentQuizSettings.showSolutions.includes("true")
+      ) {
+        resultHTML += `
+          <br>
+          <small>${escapeHtml(q.explanation)}</small>
+        `;
+      }
+    }
+
+    const response = result.userAnswer
+      ? escapeHtml(result.userAnswer)
+      : "<em>no answer</em>";
+
+    rows += `
+      <tr style="background:${background};">
+        <td style="text-align:center;">${result.number}.</td>
+        <td>${q.display}</td>
+        <td>${response}</td>
+        <td>${resultHTML}</td>
+      </tr>
+    `;
+  });
+
+  resultsContainer.innerHTML = `
+    <div class="score">
+      <h2>Quiz Complete!</h2>
+
+      <div class="score-number">
+        Score: ${score} / ${total}
+      </div>
+
+      <div class="score-percent">
+        ${percentage}%
+      </div>
+    </div>
+
+    <table class="result-table">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Given</th>
+          <th>Your Response</th>
+          <th>Result</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        ${rows}
+      </tbody>
+    </table>
+
+    <div class="result-actions">
+      <button type="button" id="retryQuizButton">
+        Retry with same settings
+      </button>
+
+      <button type="button" id="originalSettingsButton">
+        Go to original settings
+      </button>
+    </div>
+  `;
+
+  resultsContainer.classList.remove("hidden");
+
+  document
+    .getElementById("retryQuizButton")
+    .addEventListener("click", () => {
+
+      if (!currentQuizSettings) {
+        return;
+      }
+
+      currentQuestions = generateQuestions(currentQuizSettings);
+
+      if (!currentQuestions.length) {
+        return;
+      }
+
+      resultsContainer.classList.add("hidden");
+      buildAnswerForm(currentQuestions);
+
+      const first = document.querySelector(
+        "#answerForm input[name='answers[1]']"
+      );
+
+      if (first) {
+        first.focus();
+      }
+    });
+
+  document
+    .getElementById("originalSettingsButton")
+    .addEventListener("click", goToSettings);
+}
+
+
+/* ============================================================
+   SETTINGS
+   ============================================================ */
+
+function goToSettings() {
+
+  document.getElementById("answerForm").classList.add("hidden");
+  document.getElementById("quizResults").classList.add("hidden");
+  document.getElementById("quizMakeForm").classList.remove("hidden");
+
+  if (currentQuizSettings) {
+    restoreQuizSettings(currentQuizSettings);
+  }
+
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  });
+}
+
+
+function restoreQuizSettings(settings) {
+
+  const form = document.getElementById("quizMakeForm");
+
+  const radioNames = [
+    "items",
+    "questionType",
+    "problemType",
+    "qformat"
+  ];
+
+  radioNames.forEach(name => {
+
+    if (!settings[name]) {
+      return;
+    }
+
+    const input = form.querySelector(
+      `input[name="${name}"][value="${CSS.escape(settings[name])}"]`
+    );
+
+    if (input) {
+      input.checked = true;
+    }
+  });
+
+
+  const checkboxNames = [
+    "compounds",
+    "ptable",
+    "calculator",
+    "showSolutions"
+  ];
+
+  checkboxNames.forEach(name => {
+
+    let selected = settings[name] || [];
+
+    if (!Array.isArray(selected)) {
+      selected = [selected];
+    }
+
+    form
+      .querySelectorAll(`input[name="${name}[]"]`)
+      .forEach(input => {
+        input.checked = selected.includes(input.value);
+      });
+  });
+}
+
+
+/* ============================================================
+   FORMULA FORMATTING
+   ============================================================ */
+
+function formatFormula(formula) {
+
+  return escapeHtml(formula).replace(
+    /([A-Za-z\)])(\d+)/g,
+    "$1<sub>$2</sub>"
+  );
+}
+
+
+/* ============================================================
+   MOLAR MASS
+   ============================================================ */
+
+function calculateMolarMass(formula) {
+
+  const tokens = tokenizeFormula(formula);
+
+  let total = 0;
+
+  for (const token of tokens) {
+
+    const element = token.element;
+    const count = token.count;
+
+    if (!atomicMasses[element]) {
+      return NaN;
+    }
+
+    total += atomicMasses[element] * count;
+  }
+
+  return total;
+}
+
+
+function tokenizeFormula(formula) {
+
+  const tokens = [];
+
+  let i = 0;
+
+  while (i < formula.length) {
+
+    if (formula[i] === "(") {
+
+      let depth = 1;
+      let j = i + 1;
+
+      while (j < formula.length && depth > 0) {
+
+        if (formula[j] === "(") {
+          depth++;
+        }
+
+        if (formula[j] === ")") {
+          depth--;
+        }
+
+        j++;
+      }
+
+      const inside = formula.slice(i + 1, j - 1);
+
+      let numStart = j;
+
+      while (
+        j < formula.length &&
+        /\d/.test(formula[j])
+      ) {
+        j++;
+      }
+
+      const multiplier = parseInt(
+        formula.slice(numStart, j) || "1",
+        10
+      );
+
+      const innerTokens = tokenizeFormula(inside);
+
+      innerTokens.forEach(token => {
+        tokens.push({
+          element: token.element,
+          count: token.count * multiplier
+        });
+      });
+
+      i = j;
+      continue;
+    }
+
+    const elementMatch = formula
+      .slice(i)
+      .match(/^[A-Z][a-z]?/);
+
+    if (!elementMatch) {
+      i++;
+      continue;
+    }
+
+    const element = elementMatch[0];
+
+    i += element.length;
+
+    let numberStart = i;
+
+    while (
+      i < formula.length &&
+      /\d/.test(formula[i])
+    ) {
+      i++;
+    }
+
+    const count = parseInt(
+      formula.slice(numberStart, i) || "1",
+      10
+    );
+
+    tokens.push({
+      element,
+      count
+    });
+  }
+
+  return tokens;
+}
+
+
+/* ============================================================
+   DISPLAY ANSWERS
+   ============================================================ */
+
+function formatAnswer(answer, mode) {
+
+  if (mode === "nameToFormula" || mode === "formulaToName") {
+
+    if (/^[A-Z][A-Za-z0-9()]*$/.test(answer)) {
+      return formatFormula(answer);
+    }
+
+    return escapeHtml(answer);
+  }
+
+  return escapeHtml(answer);
+}
+
+
+/* ============================================================
+   SHUFFLE
+   ============================================================ */
+
+function shuffle(array) {
+
+  for (let i = array.length - 1; i > 0; i--) {
+
+    const j = Math.floor(
+      Math.random() * (i + 1)
+    );
+
+    [array[i], array[j]] =
+      [array[j], array[i]];
+  }
+
+  return array;
+}
+
+
+/* ============================================================
+   HTML ESCAPING
+   ============================================================ */
+
+function escapeHtml(value) {
+
+  return String(value ?? "")
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#039;");
+}
+
+
+/* ============================================================
+   KEYBOARD SHORTCUT
+   ============================================================ */
+
+document.addEventListener("keydown", event => {
+
+  if (event.key === "Escape" && menuModal.classList.contains("is-open")) {
+    closeMenu();
+  }
+});
+</script>
 
 </body>
 </html>
