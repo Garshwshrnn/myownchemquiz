@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ion Combination Generator</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 1200px;
+            margin: 30px auto;
+            padding: 0 20px;
+            background: #f5f5f5;
+            color: #222;
+        }
+
+        h1 {
+            margin-bottom: 5px;
+        }
+
+        p {
+            color: #555;
+        }
+
+        textarea {
+            width: 100%;
+            box-sizing: border-box;
+            font-family: monospace;
+            font-size: 14px;
+            padding: 12px;
+            border: 1px solid #bbb;
+            border-radius: 6px;
+            resize: vertical;
+        }
+
+        #input {
+            height: 300px;
+        }
+
+        #output {
+            height: 400px;
+        }
+
+        button {
+            margin: 10px 5px 10px 0;
+            padding: 10px 18px;
+            font-size: 15px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            background: #2563eb;
+            color: white;
+        }
+
+        button:hover {
+            background: #1d4ed8;
+        }
+
+        .secondary {
+            background: #555;
+        }
+
+        .secondary:hover {
+            background: #333;
+        }
+
+        .stats {
+            margin: 10px 0;
+            padding: 12px;
+            background: white;
+            border-radius: 6px;
+        }
+
+        .error {
+            color: #b91c1c;
+            background: #fee2e2;
+            padding: 10px;
+            border-radius: 6px;
+            margin: 10px 0;
+            display: none;
+        }
+
+        .success {
+            color: #166534;
+            background: #dcfce7;
+            padding: 10px;
+            border-radius: 6px;
+            margin: 10px 0;
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+
+<h1>Ion Combination Generator</h1>
+
+<p>
+    Paste your CSV below. Columns 1–4 are the cation and columns 5–8
+    are the anion. Rows may contain only a cation, so the number of
+    cations and anions does not need to be equal.
+</p>
+
+<textarea id="input" placeholder="Paste CSV here...">cation,charge +,name,type,anion,charge -,name,type
+Ag,1,Silver,fixedCharge,As,3,Arsenide,mono
+Na,1,Sodium,fixedCharge,O,2,Oxide,mono
+K,1,Potassium,fixedCharge,Cl,1,Chloride,mono
+Li,1,Lithium,fixedCharge,F,1,Fluoride,mono
+Mg,2,Magnesium,fixedCharge
+Ca,2,Calcium,fixedCharge
+Zn,2,Zinc,fixedCharge
+Al,3,Aluminum,fixedCharge</textarea>
+
+<br>
+
+<button onclick="generate()">Generate Combinations</button>
+<button class="secondary" onclick="copyOutput()">Copy Output</button>
+<button class="secondary" onclick="downloadCSV()">Download CSV</button>
+
+<div id="error" class="error"></div>
+<div id="success" class="success"></div>
+
+<div id="stats" class="stats" style="display:none;"></div>
+
+<h2>Output</h2>
+
+<textarea id="output"
+          placeholder="Generated CSV will appear here..."
+          readonly></textarea>
+
+<script>
+
+function parseCSVLine(line) {
+    const result = [];
+    let current = "";
+    let insideQuotes = false;
+
+    for (let i = 0; i < line.length; i++) {
+        const char = line[i];
+
+        if (char === '"') {
+
+            // Escaped quote
+            if (insideQuotes && line[i + 1] === '"') {
+                current += '"';
+                i++;
+            }
+            else {
+                insideQuotes = !insideQuotes;
+            }
+
+        }
+        else if (char === ',' && !insideQuotes) {
+            result.push(current);
+            current = "";
+        }
+        else {
+            current += char;
+        }
+    }
+
+    result.push(current);
+
+    return result;
+}
+
+
+function escapeCSV(value) {
+
+    value = String(value);
+
+    if (
+        value.includes(',') ||
+        value.includes('"') ||
+        value.includes('\n') ||
+        value.includes('\r')
+    ) {
+        return '"' + value.replace(/"/g, '""') + '"';
+    }
+
+    return value;
+}
+
+
+function generate() {
+
+    const input = document.getElementById("input").value;
+
+    const outputBox = document.getElementById("output");
+    const errorBox = document.getElementById("error");
+    const successBox = document.getElementById("success");
+    const statsBox = document.getElementById("stats");
+
+    errorBox.style.display = "none";
+    successBox.style.display = "none";
+
+    /*
+        Split into lines.
+
+        IMPORTANT:
+        We do NOT require every row to have 8 columns.
+    */
+
+    const lines = input
+        .split(/\r?\n/)
+        .filter(line => line.trim() !== "");
+
+    if (lines.length < 2) {
+        errorBox.textContent =
+            "Please provide a header and at least one data row.";
+
+        errorBox.style.display = "block";
+        return;
+    }
+
+
+    // First line = header
+    const header = parseCSVLine(lines[0]);
+
+    if (header.length < 4) {
+        errorBox.textContent =
+            "The CSV must have at least 4 columns for the cation.";
+
+        errorBox.style.display = "block";
+        return;
+    }
+
+
+    const cations = [];
+    const anions = [];
+
+    const cationKeys = new Set();
+    const anionKeys = new Set();
+
+
+    /*
+        Process every row independently.
+
+        Columns 0-3:
+            CATION
+
+        Columns 4-7:
+            ANION, if present
+
+        This means a row can have:
+
+            4 columns  -> cation only
+
+        OR
+
+            8 columns  -> cation + anion
+    */
+
+    for (let i = 1; i < lines.length; i++) {
+
+        const cells = parseCSVLine(lines[i]);
+
+
+        /*
+            Ignore completely empty rows.
+        */
+
+        if (cells.every(cell => cell.trim() === "")) {
+            continue;
+        }
+
+
+        /*
+            CATION
+
+            As long as columns 1-4 exist,
+            this row contains a cation.
+        */
+
+        if (cells.length >= 4) {
+
+            const cation = cells.slice(0, 4);
+
+            // Make sure the cation actually has data
+            if (!cation.every(cell => cell.trim() === "")) {
+
+                const key = JSON.stringify(cation);
+
+                if (!cationKeys.has(key)) {
+                    cationKeys.add(key);
+                    cations.push(cation);
+                }
+            }
+        }
+
+
+        /*
+            ANION
+
+            Only add an anion if columns 5-8
+            actually contain data.
+
+            This is what allows cation-only rows.
+        */
+
+        if (cells.length >= 8) {
+
+            const anion = cells.slice(4, 8);
+
+            // Make sure the anion actually has data
+            if (!anion.every(cell => cell.trim() === "")) {
+
+                const key = JSON.stringify(anion);
+
+                if (!anionKeys.has(key)) {
+                    anionKeys.add(key);
+                    anions.push(anion);
+                }
+            }
+        }
+    }
+
+
+    /*
+        Check that we found both types.
+    */
+
+    if (cations.length === 0) {
+        errorBox.textContent =
+            "No cations were found.";
+
+        errorBox.style.display = "block";
+        return;
+    }
+
+    if (anions.length === 0) {
+        errorBox.textContent =
+            "No anions were found. Anions must occupy columns 5–8.";
+
+        errorBox.style.display = "block";
+        return;
+    }
+
+
+    /*
+        Create every possible combination.
+
+        Cation 1 × Anion 1
+        Cation 1 × Anion 2
+        Cation 1 × Anion 3
+        ...
+        Cation 2 × Anion 1
+        Cation 2 × Anion 2
+        ...
+    */
+
+    const outputRows = [];
+
+    // Output header
+    outputRows.push(header.slice(0, 8));
+
+
+    for (const cation of cations) {
+
+        for (const anion of anions) {
+
+            outputRows.push([
+                ...cation,
+                ...anion
+            ]);
+
+        }
+    }
+
+
+    /*
+        Convert the rows back into CSV.
+    */
+
+    const csv = outputRows
+        .map(row => row.map(escapeCSV).join(","))
+        .join("\n");
+
+
+    outputBox.value = csv;
+
+
+    /*
+        Statistics
+    */
+
+    const combinationCount =
+        cations.length * anions.length;
+
+    statsBox.innerHTML =
+        `<strong>Cations:</strong> ${cations.length}
+        &nbsp;&nbsp;|&nbsp;&nbsp;
+        <strong>Anions:</strong> ${anions.length}
+        &nbsp;&nbsp;|&nbsp;&nbsp;
+        <strong>Combinations:</strong> ${combinationCount}`;
+
+    statsBox.style.display = "block";
+
+
+    successBox.textContent =
+        "Combinations generated successfully.";
+
+    successBox.style.display = "block";
+}
+
+
+async function copyOutput() {
+
+    const output =
+        document.getElementById("output").value;
+
+    const successBox =
+        document.getElementById("success");
+
+    if (!output) {
+        alert("Generate the combinations first.");
+        return;
+    }
+
+
+    try {
+
+        await navigator.clipboard.writeText(output);
+
+        successBox.textContent =
+            "Output copied to your clipboard.";
+
+        successBox.style.display = "block";
+
+    }
+    catch (error) {
+
+        // Clipboard fallback
+        const textarea =
+            document.getElementById("output");
+
+        textarea.focus();
+        textarea.select();
+
+        document.execCommand("copy");
+
+        successBox.textContent =
+            "Output copied to your clipboard.";
+
+        successBox.style.display = "block";
+    }
+}
+
+
+function downloadCSV() {
+
+    const output =
+        document.getElementById("output").value;
+
+    if (!output) {
+        alert("Generate the combinations first.");
+        return;
+    }
+
+
+    const blob = new Blob(
+        [output],
+        { type: "text/csv;charset=utf-8;" }
+    );
+
+
+    const url =
+        URL.createObjectURL(blob);
+
+
+    const link =
+        document.createElement("a");
+
+    link.href = url;
+    link.download = "ion_combinations.csv";
+
+
+    document.body.appendChild(link);
+
+    link.click();
+
+    document.body.removeChild(link);
+
+    URL.revokeObjectURL(url);
+}
+
+</script>
+
+</body>
+</html>
